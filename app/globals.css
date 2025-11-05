@@ -1,0 +1,144 @@
+:root {
+  --bg: #f7f8fc;
+  --accent: #2b7a78;
+  --accent-dark: #195a5f;
+  --text-primary: #102a43;
+  --text-secondary: #486581;
+  --border: #d9e2ec;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 30px rgba(34, 134, 130, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(25, 90, 95, 0.3);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.highlight {
+  color: var(--accent-dark);
+}
+
+.exercise-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(43, 122, 120, 0.12);
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.diagram {
+  background: linear-gradient(140deg, rgba(43, 122, 120, 0.08), rgba(25, 90, 95, 0.15));
+  border-radius: 18px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.diagram::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  background: rgba(43, 122, 120, 0.22);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.diagram svg {
+  width: 100%;
+}
+
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-card {
+    padding: 1.5rem;
+  }
+}
